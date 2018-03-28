@@ -13,7 +13,9 @@ class CreateCommentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('comments', function (Blueprint $table) {
+
+        if(!Schema::hasTable('users')){
+            Schema::create('comments', function (Blueprint $table) {
             $table->increments('id');
             $table->longText('body');
             $table->string('url', 255)->nullable();                      //a string pointing towards the work that they have doen for the day
@@ -27,7 +29,9 @@ class CreateCommentsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
 
             $table->timestamps();
-        });
+            });
+        }
+
     }
 
     /**
