@@ -10,10 +10,12 @@ class Company extends Model
 
     protected $fillable = [
         'name',
-//        'description',
-//        'company_id',
-//        'user_id',
-//        'days',
+        'description',
+        'user_id',
 
     ];
+
+    public function users(){
+        return $this->belongsTo('App\Model\User');
+    }
 }

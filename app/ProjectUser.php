@@ -8,7 +8,6 @@ class ProjectUser extends Model
 {
     //
     protected $fillable = [
-        'name',
         'project_id',
         'user_id',
 

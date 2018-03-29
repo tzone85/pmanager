@@ -17,4 +17,12 @@ class Project extends Model
 
     ];
 
+    public function companies(){
+        return $this->belongsTo('App\Model\Company');
+    }
+
+    public function users(){
+        return $this->belongsTo('App\Model\User');
+    }
+
 }
