@@ -50,6 +50,8 @@ class CompaniesController extends Controller
      */
     public function show(Company $company)
     {
+//         = Company::find($company->id)
+
         //$company = Company::find($company->id)
         $company = Company::where('id', $company->id)->first();
 
