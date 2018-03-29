@@ -14,7 +14,7 @@ class CreateCommentsTable extends Migration
     public function up()
     {
 
-        if(!Schema::hasTable('users')){
+
             Schema::create('comments', function (Blueprint $table) {
             $table->increments('id');
             $table->longText('body');
@@ -30,7 +30,7 @@ class CreateCommentsTable extends Migration
 
             $table->timestamps();
             });
-        }
+
 
     }
 
