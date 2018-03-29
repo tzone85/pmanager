@@ -35,19 +35,27 @@ class User extends Authenticatable
         remember_token',
     ];
 
-    public function tasks(){
-        return $this->hasMany('App\Model\Task');
-    }
+//    public function tasks(){
+//        return $this->hasMany('App\Model\Task');
+//    }
 
     public function comments(){
-        return $this->hasMany('App\Model\Comment');
+        return $this->hasMany('App\Comment');
     }
 
     public function role(){
-        return $this->belongsTo('App\Model\Role');
+        return $this->belongsTo('App\Role');
     }
 
     public function companies(){
-        return $this->hasMany('App\Model\Company');
+        return $this->hasMany('App\Company');
+    }
+
+    public function tasks(){
+        return $this->belongsToMany('App\Task');
+    }
+
+    public function project(){
+        return $this->belongsToMany('App\Project');
     }
 }

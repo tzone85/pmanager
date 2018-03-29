@@ -15,7 +15,7 @@ class Company extends Model
 
     ];
 
-    public function users(){
-        return $this->belongsTo('App\Model\User');
+    public function user(){
+        return $this->belongsTo('App\User');
     }
 }
