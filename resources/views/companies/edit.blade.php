@@ -60,8 +60,6 @@
             <ol class="list-unstyled">
                 <li><a href="/companies/{{$company->id}}">View copanies</a></li>
                 <li><a href="/companies">All copanies</a></li>
-                
-
 
             </ol>
         </div>
