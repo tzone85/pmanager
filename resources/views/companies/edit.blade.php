@@ -11,7 +11,7 @@
         <div class="row col-md-12 col-lg-12 col-sm-12" style="background: white; margin: 10px;">
 
             <form action="{{ route('companies.update', [$company->id]) }}" method="post">
-                {{ csrf_token() }}
+                {{ csrf_field() }}
 
                 <input type="hidden" name="_method" value="put">
 
